@@ -1,0 +1,32 @@
+{
+    "bob@gmail.com" : {
+        "name": "Bob",
+         "class" : "5th B",
+         "gender" : "male",
+         "dob":"01-01-2007",
+          "address":{
+              "country":"India",
+              "city":"Delhi",
+              "state" :"Delhi",
+              "zip": "50745",
+              "street":"Church street"
+          },
+          "email":"bob@gmail.com",
+          "contact":"123456789"       
+    },
+    "bobs@gmail.com" : {
+        "name": "Bobs",
+         "class" : "5th B",
+         "gender" : "male",
+         "dob":"01-01-2007",
+          "address":{
+              "country":"India",
+              "city":"Delhi",
+              "state" :"Delhi",
+              "zip": "50745",
+              "street":"Church street"
+          },
+          "email":"bobs@gmail.com",
+          "contact":"123456789"       
+    }
+}
