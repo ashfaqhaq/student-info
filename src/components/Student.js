@@ -1,4 +1,4 @@
-import React from 'react'
+import React , {Fragments} from 'react'
 import jsonData from './details.json';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
@@ -13,9 +13,16 @@ const users = jsonData
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
+      display: 'flex',
+      flexWrap: 'wrap',
     },
     '& .MuiTextField-root': {
         margin: theme.spacing(1),
+        width: '25ch',
+      },
+      textField: {
+        marginLeft: theme.spacing(1),
+        marginRight: theme.spacing(1),
         width: '25ch',
       },
     menuButton: {
@@ -28,12 +35,19 @@ const useStyles = makeStyles((theme) => ({
 
 
 function Student(props) {
+  
     const email_id = props.info.email;
     console.log(props.info)
     console.log(email_id)
+    users[email_id].name= "ashfaq"
+    const handleChange=(e)=>{
+      console.log(e.target.id)
+      users[email_id].[e.target.id] = e.target.value;
+      console.log(users[email_id])
+    }
     const classes = useStyles();
     return (
-        <div>
+      <div className={classes.root}>
 Studnet hai bro
 <AppBar position="static">
         <Toolbar>
@@ -49,25 +63,30 @@ Studnet hai bro
       </AppBar>
       <TextField
       required
-      id="outlined-required"
+      id="name"
       label="Required"
       defaultValue={users[email_id].name}
       variant="outlined"
+      onChange={handleChange}
+      fullWidth
+          margin="normal"
+          InputLabelProps={{
+            shrink: true,
+          }}
     />
+   
     <TextField
-      disabled
-      id="outlined-disabled"
+      
+      id="student_class"
       label="Disabled"
       defaultValue={users[email_id].class}
+      
+      InputProps={{
+        readOnly: true,
+      }}
       variant="outlined"
     />
-    <TextField
-      id="outlined-password-input"
-      label="Password"
-      type="password"
-      autoComplete="current-password"
-      variant="outlined"
-    />
+    
     <TextField
       id="outlined-read-only-input"
       label="Read Only"
@@ -93,10 +112,12 @@ Studnet hai bro
       defaultValue="Default Value"
       helperText="Some important text"
       variant="outlined"
+      
     />
 
         </div>
     )
 }
+
 
 export default Student
