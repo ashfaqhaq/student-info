@@ -6,6 +6,13 @@
         "role":"student"
         
     },
+    "berta@gmail.com": {
+        "email" : "berta@gmail.com",
+        "name":"berta",
+       "password":"123456",
+        "role":"student"
+        
+    },
    "admin":{
        "email" : "admin",
     "name":"Teacher",

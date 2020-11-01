@@ -1,8 +1,8 @@
 {
     "ash@gmail.com" : {
-        "name": "Bob",
+        "name": "Ash",
          "class" : "5th B",
-         "gender" : "male",
+         "gender" : "Male",
          "dob":"01-01-2007",
           "address":{
               "country":"India",
@@ -11,14 +11,14 @@
               "zip": "50745",
               "street":"Church street"
           },
-          "email":"bob@gmail.com",
+          "email":"ash@gmail.com",
           "contact":"123456789"       
     },
-    "bobs@gmail.com" : {
-        "name": "Bobs",
-         "class" : "5th B",
-         "gender" : "male",
-         "dob":"01-01-2007",
+    "berta@gmail.com" : {
+        "name": "Berta",
+         "class" : "7th B",
+         "gender" : "Female",
+         "dob":"04-09-2000",
           "address":{
               "country":"India",
               "city":"Delhi",
@@ -26,10 +26,7 @@
               "zip": "50745",
               "street":"Church street"
           },
-          "email":"bobs@gmail.com",
-          "contact":"123456789"       
-    },
-    "admin": {
-        "name":"admin"
+          "email":"berta@gmail.com",
+          "contact":"987654320"       
     }
 }

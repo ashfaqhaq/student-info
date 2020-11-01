@@ -1,4 +1,4 @@
-import React from 'react'
+import React ,{useState} from 'react'
 import jsonData from './details.json';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -8,6 +8,9 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
+import Button from '@material-ui/core/Button';
+import Student from './Student'
+import { green } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   table: {
@@ -20,18 +23,30 @@ console.log(users)
 function createData(name, _class, gender, dob, contact) {
     return { name, _class, gender, dob, contact };
   }
-const rows = 
+
+
+
+    
+
+function Admin(props) {
+
+  const [show, setShow] = useState(false)
+  const [key, setKey] = useState('')
+  const handleDetails = (key) =>{
+    // console.log(key)
+    setShow(true);
+   setKey(key);
+  }
+  const rows = 
     Object.keys(users).map((items) => {
            
-        return (createData(users[items].name,users[items].class,users[items].gender,users[items].contact)
+        return (createData(users[items].name,users[items].class,users[items].gender,users[items].contact,<Button style={{ color: green[500] }} onClick={()=>{handleDetails(items)}}>View Details </Button>)
            //  console.log(users[items].name)
             )
        })
-    
-    
-console.log(rows);
-function Admin(props) {
 
+           
+console.log(rows);
 // console.log(jsonData)
 // const users = [...jsonData]
 
@@ -67,9 +82,8 @@ const classes = useStyles();
         </TableBody>
       </Table>
     </TableContainer>
-
-
-
+             
+      {show? <Student info={key} /> : console.log("nothing to render")}
         
       
         </div>

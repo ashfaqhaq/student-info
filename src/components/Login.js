@@ -95,6 +95,12 @@ render() {
              <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick()}/>
          </div>
          </MuiThemeProvider>
+
+      <h4>Login info</h4>
+      <h6>id : password </h6>
+      <li> admin : admin </li> 
+      <li> ash@gmail.com : 123456 </li>
+      <li> berta@gmail.com : 123456 </li>
       </div>
     );
   }

@@ -27,7 +27,7 @@ function Dashboard(props) {
       </AppBar>
 
 
-        {role==="admin"? <Admin info= {props.location.state.user} />:<Student info= {props.location.state.user} />}
+        {role==="admin"? <Admin info= {props.location.state.user} />:<Student info= {props.location.state.user.email} />}
         
         </>
     )
