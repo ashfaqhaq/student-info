@@ -1,15 +1,11 @@
-import React , {Fragments} from 'react'
+import React  from 'react'
 import jsonData from './details.json';
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
 import TextField from '@material-ui/core/TextField';
 
 const users = jsonData
+
+
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
@@ -39,28 +35,23 @@ function Student(props) {
     const email_id = props.info.email;
     console.log(props.info)
     console.log(email_id)
-    users[email_id].name= "ashfaq"
+   
     const handleChange=(e)=>{
       console.log(e.target.id)
       users[email_id].[e.target.id] = e.target.value;
       console.log(users[email_id])
+      /*file.set(users[email_id].[e.target.id], e.target.value); */
+      // file.set(users[email_id].[e.target.id], e.target.value);
+      // file.set("admin.name","popop")
+      // console.log(file.get())
+      // file.save();
     }
     const classes = useStyles();
+    
     return (
       <div className={classes.root}>
-Studnet hai bro
-<AppBar position="static">
-        <Toolbar>
-          {/*<IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-    </IconButton> */}
-          
-          <Button color="inherit">Logout</Button>
-          <Typography variant="subtitle1" className={classes.title}>
-            {email_id}
-          </Typography>
-        </Toolbar>
-      </AppBar>
+
+
       <TextField
       required
       id="name"
@@ -109,7 +100,7 @@ Studnet hai bro
     <TextField
       id="outlined-helperText"
       label="Helper text"
-      defaultValue="Default Value"
+      defaultValue= {users["admin"].name}
       helperText="Some important text"
       variant="outlined"
       

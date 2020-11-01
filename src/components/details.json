@@ -28,5 +28,8 @@
           },
           "email":"bobs@gmail.com",
           "contact":"123456789"       
+    },
+    "admin": {
+        "name":"admin"
     }
 }

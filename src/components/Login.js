@@ -4,8 +4,7 @@ import AppBar from 'material-ui/AppBar';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 import jsonData from './users.json';
-import {Router, Route, RouteHandler, Redirect} from 'react-router';
-import { Link , useHistory } from 'react-router-dom';
+import Navbar from './Navbar'
 
 console.log(jsonData)
 // const formSchemaS = [...jsonData];
@@ -21,10 +20,9 @@ constructor(props){
   }
  }
 
- handleClick(event){
+ handleClick(){
   // const history = useHistory();
     // var apiBaseUrl = "http://localhost:4000/api/";
-    var self = this;
     var payload={
     "email":this.state.username,
     "password":this.state.password
@@ -75,6 +73,7 @@ render() {
    
     return (
       <div>
+      <Navbar auth="Login"/>
         <MuiThemeProvider>
           <div>
           <AppBar
@@ -93,7 +92,7 @@ render() {
                onChange = {(event,newValue) => this.setState({password:newValue})}
                />
              <br/>
-             <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick(event)}/>
+             <RaisedButton label="Submit" primary={true} style={style} onClick={(event) => this.handleClick()}/>
          </div>
          </MuiThemeProvider>
       </div>

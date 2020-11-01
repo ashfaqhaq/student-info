@@ -8,7 +8,6 @@ import TableContainer from '@material-ui/core/TableContainer';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
-import Snackbar from '@material-ui/core/Snackbar';
 
 const useStyles = makeStyles({
   table: {
@@ -41,6 +40,7 @@ const classes = useStyles();
     console.log(props.info)
     return (
         <div>
+       
         <TableContainer component={Paper}>
       <Table className={classes.table} aria-label="simple table">
         <TableHead>
@@ -49,7 +49,7 @@ const classes = useStyles();
             <TableCell align="right">Class</TableCell>
             <TableCell align="right">Gender&nbsp;(g)</TableCell>
             <TableCell align="right">Contact&nbsp;</TableCell>
-            <TableCell align="right">Gender&nbsp;</TableCell>
+            <TableCell align="right">Details&nbsp;</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>

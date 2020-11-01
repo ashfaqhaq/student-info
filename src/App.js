@@ -1,10 +1,9 @@
 import Home from './components/Home';
 import About from './components/About';
-import Navbar from './components/Navbar';
 import Error from './components/Error';
 import './App.css';
-import React, { Component } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import Login from './components/Login';
 import Dashboard from './components/Dashboard';
 
@@ -12,7 +11,7 @@ function App() {
   return (
     <div className="App">
     <main>
-    <Navbar />
+    
     <Switch>
     
         <Route path="/" component={Home} exact />
